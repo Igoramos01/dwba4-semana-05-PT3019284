@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <header>
+    <div id="menu-placeholder"></div>
+  </header>
+  <script>
+    fetch("menu.html")
+      .then(response => response.text())
+      .then(menuHtml => {
+        const menuPlaceholder = document.getElementById("menu-placeholder");
+        menuPlaceholder.innerHTML = menuHtml;
+      });
+  </script>
+
+  <img id="topo" src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/Logo.jpg" alt="Logo"
+    height="100px">
+
+  <h1>Inscreva-se</h1>
+
+  <form>
+    <fieldset>
+      Evento
+      <select name="estado" required>
+        <option value="NA">--Selecione--</option>
+        <option value="NA">Voa sem asas</option>
+        <option value="NA">Festa junina</option>
+        <option value="NA">Semana da tecnologia</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Informações de Acesso</legend><br>
+
+      Usuário <input name="usuario" required><br><br>
+      Senha <input name="senha" type="password" required><br><br>
+      Confirme a Senha <input name="senha" type="password" required>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Informações Pessoais</legend><br>
+
+      Nome Completo <input name="usuario" required><br><br>
+      E-mail <input name="e-mail" type="email" required><br><br>
+      Celular <input name="fone" type="tel" pattern="^\([0-9]{2}\) [0-9]{5}-[0-9]{4}$" required> (99) 99999-9999
+      <br><br>
+      <fieldset>
+        <legend>Sexo</legend>
+
+        Masculino <input name="S" type="radio" value="m" required>
+        Feminino <input name="S" type="radio" value="f">
+
+      </fieldset><br>
+
+      Data de Nascimento <input name="data" type="date" required><br><br>
+      Cor Favorita <input name="cor" type="color" required><br><br>
+      Perfil no Github <input name="link" type="url" required><br>
+
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="inscrever">
+    <input type="reset" value="limpar"><br><br>
+
+  </form>
+
+  <a href="https://www.facebook.com/ifsppirituba" target="_blank"><img
+      src="https://github.com/DWBA4/dwba4_semana_imagens/blob/master/facebook.png?raw=true" alt="SEJA_RARO"
+      height="50px"></a>
+
+  <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011)
+    2504-0100</p>
+
+</body>
+
+</html>

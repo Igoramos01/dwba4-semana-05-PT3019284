@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <header>
+    <div id="menu-placeholder"></div>
+  </header>
+  <script>
+    fetch("menu.html")
+      .then(response => response.text())
+      .then(menuHtml => {
+        const menuPlaceholder = document.getElementById("menu-placeholder");
+        menuPlaceholder.innerHTML = menuHtml;
+      });
+  </script>
+
+  <img id="topo" src="https://raw.githubusercontent.com/DWBA4/dwba4_semana_imagens/master/Logo.jpg" alt="Logo"
+    height="100px">
+
+  <h1>Entrar</h1>
+
+  <form>
+    
+      Usuário <input name="usuario" required><br><br>
+      Senha <input name="e-mail" type="password" required><br><br>
+      <input type="submit" value="Entrar">
+      <span class="#"><a href="#">Esqueci a senha</a></span><br><br><br>
+
+  </form>
+
+  <a href="https://www.facebook.com/ifsppirituba" target="_blank"><img
+      src="https://github.com/DWBA4/dwba4_semana_imagens/blob/master/facebook.png?raw=true" alt="SEJA_RARO"
+      height="50px"></a>
+
+  <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011)
+    2504-0100</p>
+
+</body>
+
+</html>
